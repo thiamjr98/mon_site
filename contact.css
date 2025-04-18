@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: white; /* Changement de couleur au survol */
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.subject,
+.sujet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Ajout de transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #333; /* Changement de couleur de bordure au focus */
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.5); /* Ombre au focus */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+textarea {
+  height: 150px; /* Hauteur pour le champ de message */
+  resize: vertical; /* Réglage automatique de la taille du champ de message */
+}
+#Message {
+  width: 80%;
+  padding: 10px 50px 80px 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+button {
+  padding: 12px 40px;
+  font-size: 1.2em;
+  color: hsl(0, 0%, 100%);
+  background-color: #333;
+  border: none !important;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout de transition */
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #514f4f;
+  transform: scale(1.05); /* Agrandissement du bouton au survol */
+}
+
+#send {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 5px !important;
+  margin-bottom: 30px;
+}
+
+.reseau {
+  text-align: center;
+  margin: 20px;
+}
+
+.reseau h2 {
+  margin-bottom: 20px;
+}
+
+.reseau i {
+  font-size: 30px; /* Taille des icônes */
+  margin: 10px; /* Espacement entre les icônes */
+  transition: transform 0.3s, color 0.3s; /* Transition pour l'animation */
+  color: #555; /* Couleur par défaut des icônes */
+}
+
+.reseau i:hover {
+  transform: scale(1.2); /* Agrandissement au survol */
+  color: #333; /* Changement de couleur au survol */
+}
+
+.reseau h4 {
+  margin-top: 20px;
+  font-size: 18px; /* Taille des textes */
+}
+
+/* Animation d'apparition pour les éléments de formulaire */
+.subject,
+.sujet {
+  opacity: 0; /* Initialement invisible */
+  transform: translateY(20px); /* Déplacement vers le bas */
+  animation: fadeInUp 0.5s forwards; /* Animation d'apparition */
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Rendre visible */
+    transform: translateY(0); /* Remettre à la position d'origine */
+  }
+}

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: white; /* Changement de couleur au survol */
+}
+
+#proj {
+  text-align: center;
+  margin-top: 20px;
+}
+
+section.present,
+section.presente {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.presentation {
+  width: 48%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0; /* Initialement invisible */
+  transform: translateY(20px); /* Déplacement vers le bas */
+  animation: fadeInUp 0.5s forwards; /* Animation d'apparition */
+}
+
+.presentation img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+.presentation img:hover {
+  transform: scale(1.05); /* Zoom sur l'image au survol */
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.button a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour le changement de couleur et de taille */
+}
+
+.button a:hover {
+  background-color: #514f4f;
+  transform: scale(1.1); /* Agrandissement du bouton au survol */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Rendre visible */
+    transform: translateY(0); /* Remettre à la position d'origine */
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  section.present,
+  section.presente {
+    flex-direction: column;
+    align-items: center;
+  }
+  .presentation {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  header nav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav a {
+    font-size: 16px;
+  }
+  .presentation img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  .button a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
